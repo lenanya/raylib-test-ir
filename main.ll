@@ -1,7 +1,7 @@
 target triple = "x86_64-pc-linux-gnu"
 
-@width = global i32 600
-@height = global i32 600
+@width = global i32 1000
+@height = global i32 1000
 @.str = constant [5 x i8] c"test\00"
 @title = global i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str, i32 0, i32 0)
 
@@ -74,8 +74,8 @@ init:
 	store i32 5, i32* %y
 	store i32 50, i32* %w
 	store i32 50, i32* %h
-	store i32 2, i32* %sx
-	store i32 2, i32* %sy
+	store i32 5, i32* %sx
+	store i32 3, i32* %sy
 	br label %loop
 
 loop:
@@ -110,3 +110,5 @@ declare void @ClearBackground(i32)
 declare void @SetTargetFPS(i32)
 declare float @GetFrameTime()
 declare void @DrawRectangle(i32, i32, i32, i32, i32)
+
+
